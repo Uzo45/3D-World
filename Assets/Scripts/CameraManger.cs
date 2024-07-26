@@ -57,8 +57,8 @@ public class CameraManger : MonoBehaviour
         Vector3 rotation;
         Quaternion targetRotation;
 
-        lookAngle = lookAngle + (inputManager.cameraInputX * /*cameraLookSpeed*/cameraSensivity);
-        pivotAngle = pivotAngle + (inputManager.cameraInputY * /*cameraPivotSpeed*/cameraSensivity);
+        lookAngle = lookAngle + (inputManager.cameraInputX * cameraSensivity);
+        pivotAngle = pivotAngle + (inputManager.cameraInputY * cameraSensivity);
         pivotAngle = Mathf.Clamp(pivotAngle, minimumPivotAngle, maximumPivotAngle);
 
         rotation = Vector3.zero;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43695673, g: 0.47571003, b: 0.516618, a: 1}
+  m_IndirectSpecularColor: {r: 0.3858709, g: 0.39873302, b: 0.38567853, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,7 +234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8132896523c9ec448a31370a1087d4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
+  isSprinting: 0
+  walkSpeed: 4
+  runningSpeed: 7
+  sprintSpeed: 10
   rotationSpeed: 10
 --- !u!114 &612971398
 MonoBehaviour:
@@ -340,13 +343,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2526508, y: -0.35828117, z: -0.33878288, w: -0.83248323}
+  m_LocalRotation: {x: -0.21583708, y: -0.443374, z: -0.36334637, w: -0.7904513}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 10.247, y: 411.275, z: 49.216}
+  m_LocalEulerAnglesHint: {x: 1.09, y: 419.085, z: 49.991}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,14 +473,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 612971401}
   cameraPivot: {fileID: 343917676}
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 963194228}
   collosionLayers:
     serializedVersion: 2
     m_Bits: 9
   cameraCollosionOffset: 0.2
   minimumCollosionOffset: 0.2
   cameraCollosionRadius: 0.2
-  cameraFollowSpeed: 0.2
+  cameraFollowSpeed: 0
   cameraSensivity: 0.2
   minimumPivotAngle: -35
   maximumPivotAngle: 35
